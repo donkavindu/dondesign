@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Don Design · Graphic Designer Portfolio</title>
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f6f7fb;
+      font-family: 'Inter', sans-serif;
+      color: #1a1a1a;
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      padding: 1.8rem 1.2rem;
+    }
+
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    /* ---------- NAV ---------- */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, #1e1e2f 0%, #3b3b5c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .logo span {
+      font-weight: 300;
+      -webkit-text-fill-color: #5b4bc4;
+      background: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #2d2d44;
+      font-weight: 500;
+      font-size: 0.98rem;
+      transition: color 0.2s;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: #6c5ce7;
+    }
+
+    .btn-outline {
+      border: 1.5px solid #1e1e2f;
+      background: transparent;
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #1e1e2f;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      white-space: nowrap;
+    }
+
+    .btn-outline:hover {
+      background: #1e1e2f;
+      color: white;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem 2.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-content {
+      flex: 1 1 360px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #e9e7fc;
+      color: #5b4bc4;
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.2rem;
+      color: #12121c;
+    }
+
+    .hero-content h1 span {
+      background: linear-gradient(145deg, #6c5ce7, #a29bfe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-content p {
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
+      color: #45455c;
+      max-width: 520px;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #1e1e2f;
+      color: white;
+      padding: 0.85rem 1.8rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: all 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.98rem;
+      box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+    }
+
+    .btn-primary i {
+      font-size: 0.85rem;
+    }
+
+    .btn-primary:hover {
+      background: #2f2f4a;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #1e1e2f;
+      padding: 0.85rem 1.7rem;
+      border-radius: 40px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      border: 1.5px solid #ddddea;
+      transition: all 0.2s;
+      font-size: 0.98rem;
+      white-space: nowrap;
+    }
+
+    .btn-secondary:hover {
+      border-color: #1e1e2f;
+      background: #fafaff;
+    }
+
+    .hero-visual {
+      flex: 1 1 300px;
+      background: #ded9fe;
+      border-radius: 38px;
+      padding: 1.8rem 1.8rem 0 1.8rem;
+      min-height: 260px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      box-shadow: 0 30px 40px -20px rgba(108, 92, 231, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-visual::after {
+      content: "✶ ✶ ✶";
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+      font-size: 1.4rem;
+      color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 6px;
+      font-weight: 300;
+    }
+
+    .hero-visual .mockup {
+      width: 100%;
+      max-width: 280px;
+      background: #ffffffd9;
+      backdrop-filter: blur(6px);
+      border-radius: 32px 32px 0 0;
+      padding: 1.4rem 1rem 0.8rem 1rem;
+      box-shadow: 0 -10px 30px -10px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mockup .circle-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.9rem;
+      justify-content: center;
+    }
+
+    .mockup .circle {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #d9d9e6;
+    }
+
+    .mockup .line {
+      height: 10px;
+      width: 100%;
+      background: #ebebf5;
+      border-radius: 10px;
+      margin-bottom: 0.6rem;
+    }
+
+    .mockup .line.short {
+      width: 60%;
+    }
+
+    .mockup .grid-mini {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+      margin-top: 0.5rem;
+      width: 100%;
+    }
+
+    .mockup .grid-mini div {
+      background: #d3cdfa;
+      height: 38px;
+      border-radius: 14px;
+    }
+
+    /* ---------- SECTION TITLE ---------- */
+    .section-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.6rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #12121c;
+    }
+
+    .section-title a {
+      text-decoration: none;
+      color: #6c5ce7;
+      font-weight: 500;
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: gap 0.2s;
+      white-space: nowrap;
+    }
+
+    .section-title a:hover {
+      gap: 0.8rem;
+    }
+
+    /* ---------- WORK GRID ---------- */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.6rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.05);
+      transition: all 0.25s ease;
+      border: 1px solid #f0f0f7;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 25px 35px -12px rgba(108, 92, 231, 0.2);
+      border-color: #e2ddfc;
+    }
+
+    .card-thumb {
+      height: 190px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      padding: 1rem;
+    }
+
+    /* unique gradient thumbnails */
+    .thumb-1 { background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); }
+    .thumb-2 { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+    .thumb-3 { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); }
+    .thumb-4 { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+    .thumb-5 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .thumb-6 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+
+    .thumb-tag {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #1e1e2f;
+    }
+
+    .card-info {
+      padding: 1.2rem 1.1rem 1.4rem;
+    }
+
+    .card-info h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+      color: #12121c;
+    }
+
+    .card-info p {
+      font-size: 0.88rem;
+      color: #67677e;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .card-info p i {
+      font-size: 0.65rem;
+      color: #a29bfe;
+    }
+
+    /* ---------- SERVICES ---------- */
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+      margin: 3.5rem 0 4rem;
+      background: #ffffff;
+      border-radius: 38px;
+      padding: 2.2rem 2rem;
+      box-shadow: 0 20px 35px -15px rgba(0, 0, 0, 0.05);
+    }
+
+    .service-item {
+      flex: 1 1 180px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .service-icon {
+      width: 50px;
+      height: 50px;
+      background: #ede9fe;
+      border-radius: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6c5ce7;
+      font-size: 1.3rem;
+    }
+
+    .service-item h4 {
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    .service-item p {
+      color: #5e5e75;
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    /* ---------- CTA BANNER ---------- */
+    .cta-banner {
+      background: #1e1e2f;
+      border-radius: 38px;
+      padding: 2.5rem 2.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.8rem 2rem;
+      margin-bottom: 3.5rem;
+      color: white;
+    }
+
+    .cta-banner h2 {
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+      max-width: 560px;
+    }
+
+    .cta-banner .btn-primary {
+      background: white;
+      color: #1e1e2f;
+      box-shadow: none;
+      padding: 0.9rem 2rem;
+    }
+
+    .cta-banner .btn-primary:hover {
+      background: #f0f0fa;
+      transform: translateY(-2px);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem 1.5rem;
+      padding: 2rem 0 1rem;
+      border-top: 1px solid #e3e3ef;
+      color: #5e5e75;
+      font-size: 0.9rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: #1e1e2f;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+
+    .social-links a:hover {
+      color: #6c5ce7;
+    }
+
+    /* ---------- RESPONSIVE BREAKPOINTS ---------- */
+    @media (max-width: 900px) {
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 1.2rem 1.8rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      body { padding: 1.2rem 1rem; }
+      .hero { gap: 1.8rem; }
+      .hero-visual { min-height: 220px; padding: 1.2rem 1.2rem 0; }
+      .hero-visual::after { font-size: 1.2rem; top: 1rem; right: 1rem; }
+      .mockup { max-width: 230px; }
+      .services { padding: 1.8rem 1.5rem; border-radius: 30px; }
+      .cta-banner { padding: 2rem 1.5rem; border-radius: 30px; }
+      .cta-banner .btn-primary { width: 100%; }
+      .footer { flex-direction: column; text-align: center; }
+      .social-links { justify-content: center; }
+    }
+
+    @media (max-width: 550px) {
+      .nav-links {
+        gap: 1rem 1.4rem;
+      }
+      .nav-links a {
+        font-size: 0.9rem;
+      }
+      .btn-outline {
+        padding: 0.45rem 1rem;
+        font-size: 0.85rem;
+      }
+      .work-grid {
+        grid-template-columns: 1fr;
+        gap: 1.4rem;
+      }
+      .card-thumb { height: 170px; }
+      .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-primary, .btn-secondary {
+        width: 100%;
+      }
+      .services {
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+      .service-item {
+        flex: 1 1 auto;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .logo { font-size: 1.5rem; }
+      .nav-links {
+        gap: 0.9rem 1.2rem;
+      }
+      .nav-links a {
+        font-size: 0.82rem;
+      }
+      .btn-outline {
+        padding: 0.4rem 0.9rem;
+        font-size: 0.8rem;
+      }
+      .hero-badge { font-size: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">Don<span> Design</span></div>
+    <div class="nav-links">
+      <a href="#">Work</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#" class="btn-outline">Let's talk</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">✦ available for freelance</div>
+      <h1>Design that tells your <span>brand's story</span></h1>
+      <p>I'm Don — graphic designer & visual storyteller. I craft bold identities, striking layouts, and digital experiences that stick.</p>
+      <div class="hero-cta">
+        <a href="#" class="btn-primary"><i class="fas fa-arrow-right"></i> View portfolio</a>
+        <a href="#" class="btn-secondary"><i class="fas fa-scroll"></i> Resume</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="mockup">
+        <div class="circle-row">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="line"></div>
+        <div class="line short"></div>
+        <div class="grid-mini">
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK SECTION -->
+  <div class="section-title">
+    <h2>Selected work</h2>
+    <a href="#">View all projects <i class="fas fa-arrow-right"></i></a>
+  </div>
+
+  <div class="work-grid">
+    <div class="project-card">
+      <div class="card-thumb thumb-1">
+        <span class="thumb-tag">Branding</span>
+      </div>
+      <div class="card-info">
+        <h3>Lunar Café</h3>
+        <p><i class="fas fa-tag"></i> Identity, packaging</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-thumb thumb-2">
+        <span class="thumb-tag">Editorial</span>
+      </div>
+      <div class="card-info">
+        <h3>Flux Magazine</h3>
+        <p><i class="fas fa-tag"></i> Art direction, layout</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-thumb thumb-3">
+        <span class="thumb-tag">Digital</span>
+      </div>
+      <div class="card-info">
+        <h3>Verdant Skincare</h3>
+        <p><i class="fas fa-tag"></i> Web design, UI</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-thumb thumb-4">
+        <span class="thumb-tag">Packaging</span>
+      </div>
+      <div class="card-info">
+        <h3>Rosé & Co.</h3>
+        <p><i class="fas fa-tag"></i> Label design, illustration</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-thumb thumb-5">
+        <span class="thumb-tag">Poster</span>
+      </div>
+      <div class="card-info">
+        <h3>Neon Nights</h3>
+        <p><i class="fas fa-tag"></i> Event poster series</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="card-thumb thumb-6">
+        <span class="thumb-tag">Motion</span>
+      </div>
+      <div class="card-info">
+        <h3>Pulse Studio</h3>
+        <p><i class="fas fa-tag"></i> Logo animation</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="services">
+    <div class="service-item">
+      <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+      <h4>Brand identity</h4>
+      <p>Logos, color systems, typography, and brand guidelines that feel authentic.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+      <h4>Print & editorial</h4>
+      <p>Magazines, brochures, posters — crafted with a strong typographic voice.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+      <h4>Digital design</h4>
+      <p>Websites, social media kits, and UI elements that engage and convert.</p>
+    </div>
+    <div class="service-item">
+      <div class="service-icon"><i class="fas fa-crown"></i></div>
+      <h4>Art direction</h4>
+      <p>From concept to final delivery — I lead visual projects with clarity.</p>
+    </div>
+  </div>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner">
+    <h2>Have a project in mind? Let’s create something bold.</h2>
+    <a href="#" class="btn-primary"><i class="fas fa-paper-plane"></i> Get in touch</a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2025 Don Design — graphic designer</div>
+    <div class="social-links">
+      <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+      <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
